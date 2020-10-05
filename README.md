@@ -51,11 +51,48 @@ x = range(2, 26, 2)
 # 数据在 y 轴的位置，是一个可迭代对象
 y = [15, 13, 14.5, 17, 20, 25, 26, 26, 24, 22, 18, 15]
 
+# 设置图片大小
+plt.figure(figsize=(20, 8), dpi=80)
+
+# 绘图
 plt.plot(x, y)
+
+# 设置 x y 轴的刻度
+plt.xticks(x)
+plt.yticks(y)
+
+# 保存(png,svg)
+plt.savefig("./t1.png")
+
 plt.show()
 
 ```
 
+- 设置中文显示
+
+查看 linux 下面支持的字体
+
+fc-list -> 查看支持的字体
+
+fc-list :lang=zh -> 查看支持的中文（冒号前有空格）
+
+```python
+
+import matplotlib
+from matplotlib import font_manager
+
+# 方法一: Win 和 Linux 下字体修改
+font = {'family': 'MicroSoft YaHei',
+        'weight': 'bold',
+        'size': 'larger'}
+matplotlib.rc("font", **font)
+
+# 方法二: 导入 font_manager，实例化字体，在需要的位置使用
+my_font = font_manager.FontProperties(fname="字体位置")
+plt.xticks(_x[::3], _xtick_labls[::3], rotation=60, fontproperties=my_font)
+
+
+```
 
 
 
