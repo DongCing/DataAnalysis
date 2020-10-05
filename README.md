@@ -18,3 +18,11 @@ ps：公司内部对产品分析，app 在全国各省下载量如何，条形�
 4.数据分析 或 构建模型（高级的模型构建会使用机器学习的算法）
 
 5.数据可视化——matplotib库等
+
+
+## Jupyter Notebook
+
+1.安装：pip install jupyter
+
+2.运行：jupyter notebook，新建文件会创建在打开的目录下
+
