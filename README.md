@@ -31,15 +31,30 @@ ps：公司内部对产品分析，app 在全国各省下载量如何，条形�
 
 Python 底层绘图库，主要做数据可视化图表
 
+安装：pip install matplotlib
+
 - 作用
 
   - 将数据进行可视化，更直观的呈现
 
   - 使数据更加客观，更具有说服力
 
-- 
+- 基础要点
 
+```python
 
+# pyplot 画图模块
+from matplotlib import pyplot as plt
+
+# 数据在 x 轴的位置，是一个可迭代对象
+x = range(2, 26, 2)
+# 数据在 y 轴的位置，是一个可迭代对象
+y = [15, 13, 14.5, 17, 20, 25, 26, 26, 24, 22, 18, 15]
+
+plt.plot(x, y)
+plt.show()
+
+```
 
 
 
