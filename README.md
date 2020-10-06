@@ -108,6 +108,12 @@ plt.xticks(_x[::3], _xtick_labls[::3], rotation=60, fontproperties=my_font)
 
 ```
 
+- 多样图形绘制 https://matplotlib.org/gallery/index.html
+
+- 折线图、散点图、柱状图、直方图、箱线图、饼图等
+
+- 需要知道不同的统计图到底能够表示出什么，从而来选择哪种统计图
+
 
 
 
