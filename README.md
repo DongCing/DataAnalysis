@@ -54,12 +54,19 @@ y = [15, 13, 14.5, 17, 20, 25, 26, 26, 24, 22, 18, 15]
 # 设置图片大小
 plt.figure(figsize=(20, 8), dpi=80)
 
-# 绘图
-plt.plot(x, y)
+# 绘图，可多次调用 plot 来显示多条折线
+# label 结合 legend 绘制折线的图例标注；color 折线颜色参数；linestyle 线条风格；linewidth 线条粗细；alpha 线条透明度
+plt.plot(x, y, label="图例", color="orange", linestyle="--", linewidth=5, alpha=0.5)
+
+# 添加图例，只有这里使用 prop 参数来显示中文，loc 图例位置
+plt.legend(prop=my_font, loc=0)
 
 # 设置 x y 轴的刻度
 plt.xticks(x)
 plt.yticks(y)
+
+# 绘制网格,alpha 网格线透明度
+plt.grid(alpha=0.4)
 
 # 保存(png,svg)
 plt.savefig("./t1.png")
@@ -71,6 +78,9 @@ plt.title("温度变化")
 
 plt.show()
 
+
+# 添加文本注释
+# 添加文字（水印）到图中
 ```
 
 - 设置中文显示
