@@ -64,6 +64,11 @@ plt.yticks(y)
 # 保存(png,svg)
 plt.savefig("./t1.png")
 
+# 添加描述信息
+plt.xlabel("时间")
+plt.ylabel("温度")
+plt.title("温度变化")
+
 plt.show()
 
 ```
@@ -90,7 +95,6 @@ matplotlib.rc("font", **font)
 # 方法二: 导入 font_manager，实例化字体，在需要的位置使用
 my_font = font_manager.FontProperties(fname="字体位置")
 plt.xticks(_x[::3], _xtick_labls[::3], rotation=60, fontproperties=my_font)
-
 
 ```
 
