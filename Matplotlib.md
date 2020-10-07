@@ -1,3 +1,16 @@
+### 前端 JS 绘图框架 ECharts <= 后端准备数据；Plotly，Seaborn 画图
+
+### 总结
+- matplotlib.plot(x, y)，折线图
+- matplotlib.bar(x, y)，条线图
+- matplotlib.scatter(x, y)，散点图
+- matplotlib.hist(data, bins, normed)，直方图
+- xticks 和 yticks 的设置
+- label 和 titile.grid 的设置
+- 绘图的大小和保存图片
+
+### 使用流程：1.明确问题  2.选择图形的呈现方式  3.准备数据  4.绘图和图形完善
+
 ### 绘制散点图
 
 ```python
