@@ -47,10 +47,16 @@ a = ["我和我的家乡", "姜子牙", "夺冠"]
 b = [10.14, 7.72, 3.58]
 
 # 绘制条形图,根据 x 轴数据个数,绘制数据条数
+# bar 绘制竖条形图
 plt.bar(range(len(a)), b, width=0.3)
+# barh 绘制横条形图,height 表示宽度,刻度也要改成 y 轴的
+plt.bar(range(len(a)), b, height=0.3)
 
 # 设置字符串到 x轴刻度
 plt.xticks(range(len(a)), a,)
+
+# 绘制网格
+plt.grid()
 
 plt.show()
 
