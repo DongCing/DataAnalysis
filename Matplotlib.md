@@ -32,3 +32,35 @@ plt.xticks(_x, _xtick_labels, fontproperties=my_font)
 plt.show()
 
 ```
+
+### 绘制条形图
+
+```python
+
+from matplotlib import pyplot as plt
+import matplotlib as mpl
+
+mpl.rcParams['font.sans-serif'] = ['SimHei']
+mpl.rcParams['axes.unicode_minus'] = False
+
+a = ["我和我的家乡", "姜子牙", "夺冠"]
+b = [10.14, 7.72, 3.58]
+
+# 绘制条形图,根据 x 轴数据个数,绘制数据条数
+plt.bar(range(len(a)), b, width=0.3)
+
+# 设置字符串到 x轴刻度
+plt.xticks(range(len(a)), a,)
+
+plt.show()
+
+```
+
+
+
+
+
+
+
+
+
