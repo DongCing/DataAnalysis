@@ -64,13 +64,67 @@ plt.show()
 
 ### 绘制直方图
 
-将数据（列表）分成多少组进行统计
+将数据（列表）分成多少组进行统计，适合没有进行统计过的数据
 
 组数要适当，一般 组数 = 极差 / 组距
 
 组距：每个小组的两个端点的距离
 
 极差：最大值 - 最小值
+
+```python
+
+from matplotlib import pyplot as plt
+import matplotlib as mpl
+
+mpl.rcParams['font.sans-serif'] = ['SimHei']
+mpl.rcParams['axes.unicode_minus'] = False
+
+a = [10, 20, 30, 40, 50, 11, 21, 31, 24, 15, 13, 41, 5, 48, 40]
+
+# 计算组数
+# 组距
+d = 5
+num_bins = (max(a)-min(a)) // d
+
+plt.figure(figsize=(20, 8), dpi=80)
+
+# 绘制直方图,density在 y 轴显示比率
+plt.hist(a, num_bins, density=True)
+
+# 设置 x 轴的刻度
+plt.xticks(range(min(a), max(a)+d, d))
+
+plt.grid()
+
+plt.show()
+
+```
+
+### 当数据已经统计，可以用条形图模拟直方图
+
+```python
+
+from matplotlib import pyplot as plt
+
+interval = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 60, 90]
+width = [5, 5, 5, 5, 5, 5, 5, 5, 5, 15, 30, 60]
+quantity = [836, 2737, 3723, 3926, 3596, 1438, 3273, 642, 824, 613, 215, 47]
+
+plt.figure(figsize=(20, 8), dpi=80)
+
+# width=1 条形图之间没有空隙
+plt.bar(range(12), quantity, width=1)
+
+# 设置 x 轴的刻度,额外添加最后一个刻度
+_x = [i-0.5 for i in range(13)]
+_xtick_labels = interval + [150]
+plt.xticks(_x, _xtick_labels)
+
+plt.grid()
+plt.show()
+
+```
 
 
 
