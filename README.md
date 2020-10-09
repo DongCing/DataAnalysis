@@ -117,6 +117,58 @@ plt.xticks(_x[::3], _xtick_labls[::3], rotation=60, fontproperties=my_font)
 
 ## NumPy
 
+一个在 Python 中做科学计算的基础库，重在数值计算，也是大部分 Python 科学计算库的基础库，多用于在大型多维数组上执行数值运算
+
+### NumPy 创建数组（矩阵）
+
+- 创建数组
+
+```python
+
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+b = np.array(range(1, 6))
+c = np.arange(1, 6)
+
+print(a, b, c)
+print(type(a), type(b), type(c))
+
+# 不同于list,数组没有','
+# [1 2 3 4 5] [1 2 3 4 5] [1 2 3 4 5]
+# <class 'numpy.ndarray'> <class 'numpy.ndarray'> <class 'numpy.ndarray'>
+
+# dtype 查看数组中存放的数据的类型,返回 NumPy 的数据类型
+print(a.dtype)
+
+```
+
+- 数据类型的操作
+
+```python
+
+# 指定创建的数组的数据类型
+a = np.array([1, 0, 1, 0], dtype=np.bool)
+
+# 修改数组的数据类型
+a.astype("i1")
+a.astype(np.int8)
+
+# NumPy 中的小数
+# 生成十个小数的数组
+b = np.array([random.random() for i in range(10)])
+# 保留2位小数
+c = np.round(b,2)
+
+# 同样保留小数方法
+# round(random.random(), 3)
+# "%.2f"%random.random()
+
+```
+
+- 数组的形状
+
+
 
 
 
