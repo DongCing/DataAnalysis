@@ -115,7 +115,7 @@ plt.xticks(_x[::3], _xtick_labls[::3], rotation=60, fontproperties=my_font)
 - 需要知道不同的统计图到底能够表示出什么，从而来选择哪种统计图
 
 
-
+## NumPy
 
 
 
