@@ -186,7 +186,7 @@ c = a.reshape(3, 1, 2)
 d = np.arange(6).reshape(2, 3)
 
 ```
-
+## f
 
 
 
