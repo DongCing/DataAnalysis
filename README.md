@@ -254,6 +254,37 @@ numpy.loadtxt(fname, dtype=, comments='#', delimiter=None,
 
 ```
 
+- NumPy 保存数据
+```python
+
+numpy.savetxt(fname, X, fmt='%.18e', delimiter=' ', newline='\n', 
+              header='', footer='', comments='# ', encoding=None)
+
+# fname ： 文件名或文件句柄，如果文件名结束.gz，文件将自动以压缩gzip格式保存。 loadtxt透明地理解gzip文件。
+
+# X ： 1D或2D array_like，要保存到文本文件的数据。
+
+# fmt ： str或strs序列，可选
+# 单个格式（％10.5f），格式序列或多格式字符串，例如“迭代％d - ％10.5f”，在这种情况下，将忽略分隔符。对于复杂的X，fmt的合法选项是：
+# 单个说明符，fmt ='％.4e'，导致数字格式为'（％s +％sj）'％（fmt，fmt）
+# 一个完整的字符串，指定每个实部和虚部，例如 '％.4e％+.4ej％.4e％+.4ej％.4e％+.4ej'为3列
+# 一个说明符列表，每列一个 - 在这种情况下，实部和虚部必须有单独的说明符，例如['％.3e +％.3ej'，'（％.15e％+.15ej）'] 2列
+
+# delimiter 分隔符 ： str，可选，分隔列的字符串或字符。
+
+# newline 换行符 ： str，可选，字符串或字符分隔线。
+
+# header ： str，可选，将在文件开头写入的字符串。
+
+# footer 页脚 ： str，可选，将写在文件末尾的字符串。
+
+# comments 评论 ： str，可选，将附加到header和footer字符串的字符串，以将其标记为注释。默认值：'＃'，正如预期的那样 numpy.loadtxt。
+
+# encoding ： {None，str}，可选
+# 用于编码输出文件的编码。不适用于输出流。如果编码不是'bytes'或'latin1'，您将无法在NumPy版本<1.14中加载该文件。默认为'latin1'。
+
+```
+
 
 
 
