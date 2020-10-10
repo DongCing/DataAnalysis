@@ -204,6 +204,29 @@ a + e
 
 ```
 
+- 轴（axis）
+
+在 NumPy 中可以理解为方向，使用0，1，2...数字表示
+
+对于一维数组，只有一个 0 轴；
+
+对于二维数组（shape(2,2)），有 0 轴和 1 轴
+
+对于三维数组（shape(2,2,3)），有 0，1，2 轴
+
+有了轴的概念之后，计算会更加方便。
+
+
+- NumPy 读取文件
+
+常用到的作为数据存储的文件类型有：csv，json，vml，hdf等
+
+```python
+numpy.loadtxt(fname, dtype=, comments='#', delimiter=None, converters=None, skiprows=0, usecols=None, unpack=False, ndmin=0)
+
+
+```
+
 
 
 
