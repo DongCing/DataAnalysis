@@ -246,7 +246,9 @@ numpy.loadtxt(fname, dtype=, comments='#', delimiter=None,
 
 # usecols	指定需要读取的列，索引，元组类型
 
-# unpack	选择是否将数据进行向量输出，True 读入属性将分别写入不同数组变量；False 读入数据只写入一个数组变量，默认 False
+# unpack	选择是否将数据进行向量输出，True 读入属性将分别写入不同数组变量；False 读入数据只写入一个数组变量，默认 False；
+# 将数据按对角线旋转180，行变列，列变行
+# 二维数组转置方法：arr.transpose(), arr.T, arr.swapaxes(1, 0)
 
 # encoding	对读取的文件进行预编码
 
