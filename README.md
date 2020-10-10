@@ -221,9 +221,34 @@ a + e
 
 常用到的作为数据存储的文件类型有：csv，json，vml，hdf等
 
-```python
-numpy.loadtxt(fname, dtype=, comments='#', delimiter=None, converters=None, skiprows=0, usecols=None, unpack=False, ndmin=0)
+CSV：Comma-Separated Val，逗号分隔值文件；
 
+显示：表格状态；
+
+源文件：换行和逗号分隔行列的格式化文本，每一行的数据表示一条记录
+
+```python
+
+numpy.loadtxt(fname, dtype=, comments='#', delimiter=None,
+              converters=None, skiprows=0, usecols=None, unpack=False, ndmin=0)
+
+# fname	被读取的文件名（文件的相对地址或者绝对地址），文件、字符串、产生器、gz或bz2压缩文件
+
+# dtype	指定读取后数据的数据类型，可选，默认 numpy.float
+
+# comments	跳过文件中指定参数开头的行（即不读取）
+
+# delimiter	指定读取文件中数据的分割符
+
+# converters	对读取的数据进行预处理
+
+# skiprows	选择跳过的行数，一般跳过第一行表头
+
+# usecols	指定需要读取的列，索引，元组类型
+
+# unpack	选择是否将数据进行向量输出，True 读入属性将分别写入不同数组变量；False 读入数据只写入一个数组变量，默认 False
+
+# encoding	对读取的文件进行预编码
 
 ```
 
