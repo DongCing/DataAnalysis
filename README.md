@@ -285,7 +285,7 @@ numpy.savetxt(fname, X, fmt='%.18e', delimiter=' ', newline='\n',
 
 ```
 
-- NumPy 中的索引和切片
+- NumPy 中的索引和切片，取值
 
 只获取数组中的某一行，或者某一列。操作同 Python 中列表的操作
 ```python
@@ -316,8 +316,35 @@ arr[[0,2], [0,1]]
 
 ```
 
+- NumPy 修改数值
 
+取值然后赋值
 
+```python
+
+# 修改 arr 中小于 10 的数值
+arr[arr<10] = 0
+
+```
+
+- NumPy 中的三元运算符
+
+```python
+
+# numpy.where(条件, True, False)
+numpy.where(arr<=10, 0, 20)
+
+```
+
+- NumPy 中的 clip （裁剪）
+
+```python
+
+# arr中小于 10 的数替换为 10，大于 20 的数替换为 20
+arr.clip(10, 20)
+numpy.clip(arr, 10, 20)
+
+```
 
 
 
