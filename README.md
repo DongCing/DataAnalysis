@@ -436,6 +436,7 @@ arr[：, [1, 2]] = arr[：, [2, 1]]
   
   - 标准差：arr.std(axis=None) 一组数据平均值分散程度的一种度量
 
+
 ## Pandas
 
 NumPy 能够处理数值型数据
@@ -443,8 +444,14 @@ NumPy 能够处理数值型数据
 Pandas 能够处理更多的数据类型，如字符串，时间序列等
 
 - Pandas 的常用数据类型
+
   - Series 一维，带标签数组（带有数组的索引）
+    - Series 对象本质上由两个数组构成
+      - 一个数组构成对象的键(index, 索引)
+      - 一个数组构成对象的值(values)
+      
   - DataFrame 二维，Series 容器
+  
 ```python
 
 import pandas as pd
@@ -469,7 +476,11 @@ print(t3, type(t3))
 
 ```
 
+- Pandas：Series 切片和索引
 
+  - 切片：直接传入 start end 或者步长
+  
+  - 索引：一个的时候直接传入序号或者 index，多个时传入序号或者 index 的列表
 
 
 
