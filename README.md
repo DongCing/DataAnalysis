@@ -346,6 +346,19 @@ numpy.clip(arr, 10, 20)
 
 ```
 
+- NumPy 数组的拼接
+
+```python
+
+# 竖直拼接（vertically），向下拼接到行，列数不变
+numpy.vstack((arr1, arr2))
+
+# 水平拼接（horizontally），向右拼接到列，行数不变
+numpy.hstack((arr1, arr2))
+
+
+```
+
 
 
 
