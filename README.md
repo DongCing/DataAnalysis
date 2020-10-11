@@ -442,6 +442,33 @@ NumPy 能够处理数值型数据
 
 Pandas 能够处理更多的数据类型，如字符串，时间序列等
 
+- Pandas 的常用数据类型
+  - Series 一维，带标签数组（带有数组的索引）
+  - DataFrame 二维，Series 容器
+```python
+
+import pandas as pd
+import numpy as np
+import string
+
+# Series 一维，带标签数组（带有数组的索引）
+# 参数 index 可以制定索引,需和数据索引长度一致
+t1 = pd.Series([1, 3, 5])
+t2 = pd.Series(np.arange(10), index=list(string.ascii_uppercase[:10]))
+
+# 通过字典创建 Series,默认索引就是字典的键
+# 可以重新指定索引,若新索引能对应字典的键,取对应值;否则值为 NaN
+a = {string.ascii_uppercase[i]: i for i in range(10)}
+t3 = pd.Series(a, index=[1, 'A', 3, 4, 5, 6, 7, 8, 9, 0, 10])
+
+# NumPy 中 NaN 为float,Pandas 会自动根据数据类型更改 Series 的 dtype 类型
+# 修改 dtype 和 numpy 的方法一样
+t3.astype(float)
+
+print(t3, type(t3))
+
+```
+
 
 
 
