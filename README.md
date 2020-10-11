@@ -398,16 +398,43 @@ arr[：, [1, 2]] = arr[：, [2, 1]]
   
     - 什么时候 NumPy 中会出现 nan
     
-    - 读取文件为 float 的时候，如果有缺失，就会出现 nan
+      - 读取文件为 float 的时候，如果有缺失，就会出现 nan
     
-    - 进行一个不合适的计算的时候（比如无穷大 inf 减去无穷大）
+      - 进行一个不合适的计算的时候（比如无穷大 inf 减去无穷大）
+      
+    - 注意点
+      
+      - 两个 nan 是不相等的：numpy.nan != numpy.nan
+      
+      - 判断数组中 nan 的个数：numpy.count_nonzero(t != t)
+      
+      - 判断一个数字是否为 nan：numpy.isnan(a)
+      
+      - 把 nan 替换为 0 ：t[np.isnan(t)] = 0
+      
+      - nan 和任何值计算都为 nan 
   
   - inf(-inf, inf)：infinity，inf 表示正无穷，-inf 表示负无穷
   
     - 什么时候会出现 inf
     
-    - 一个数字除以 0
+      - 一个数字除以 0
+
+- NumPy 中常用统计函数
+
+  - 求和：arr.sum(axis=None)
   
+  - 均值：arr.mean(a, axis=None) 受离群点的影响较大
+  
+  - 中值：numpy.median(arr, axis=None)
+  
+  - 最大值：arr.max(axis=None)
+  
+  - 最小值：arr.min(axis=None)
+  
+  - 极值：numpy.ptp(arr, axis=None) 最大值和最小值之差
+  
+  - 标准差：arr.std(axis=None)
 
 
 
