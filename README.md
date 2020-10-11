@@ -382,11 +382,32 @@ arr[：, [1, 2]] = arr[：, [2, 1]]
   
   - 创建一个对角线为 1 的正方形数组：numpy.eye(3)
 
+  - 生成随机数（生成随机数1-10，三行四列数组）：numpy.random.randint(1, 10, (3, 4))
 
+- NumPy 中 copy 和 view
 
+  - a = b 完全不复制，a 和 b 相互影响
+  
+  - a = b[:]，视图的操作，一种切片，会创建新的对象 a，但是 a 的数据完全由 b 保管，他们两个的数据变化是一致的
+  
+  - a = b.copy()，复制，a 和 b 互不影响
+  
+- NumPy 中的 nan 和 inf
 
-
-
+  - nan(NAN, NAN)：not a number 表示不是一个数字
+  
+    - 什么时候 NumPy 中会出现 nan
+    
+    - 读取文件为 float 的时候，如果有缺失，就会出现 nan
+    
+    - 进行一个不合适的计算的时候（比如无穷大 inf 减去无穷大）
+  
+  - inf(-inf, inf)：infinity，inf 表示正无穷，-inf 表示负无穷
+  
+    - 什么时候会出现 inf
+    
+    - 一个数字除以 0
+  
 
 
 
