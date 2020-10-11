@@ -434,7 +434,7 @@ arr[：, [1, 2]] = arr[：, [2, 1]]
   
   - 极值：numpy.ptp(arr, axis=None) 最大值和最小值之差
   
-  - 标准差：arr.std(axis=None)
+  - 标准差：arr.std(axis=None) 一组数据平均值分散程度的一种度量
 
 
 
