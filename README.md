@@ -346,8 +346,7 @@ numpy.clip(arr, 10, 20)
 
 ```
 
-- NumPy 数组的拼接
-
+- NumPy 数组的拼接（对应分割）
 ```python
 
 # 竖直拼接（vertically），向下拼接到行，列数不变
@@ -356,6 +355,16 @@ numpy.vstack((arr1, arr2))
 # 水平拼接（horizontally），向右拼接到列，行数不变
 numpy.hstack((arr1, arr2))
 
+```
+
+- NumPy 数组的行列交换
+```python
+
+# 行交换，选中2 3行，进行交换
+arr[[1, 2], :] = arr[[2, 1], :]
+
+# 列交换，选中2 3列，进行交换
+arr[：, [1, 2]] = arr[：, [2, 1]]
 
 ```
 
