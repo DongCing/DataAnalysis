@@ -368,6 +368,20 @@ arr[：, [1, 2]] = arr[：, [2, 1]]
 
 ```
 
+- NumPy 其他方法
+  
+  - 获取最大值最小值的位置：
+  
+    - numpy.argmax(t, axis=0)
+    
+    - numpy.argmin(t, axis=1)
+  
+  - 创建一个全为 0 的数组：numpy.zeros((3, 4))
+  
+  - 创建一个全为 1 的数组：numpy.ones((3, 4))
+  
+  - 创建一个对角线为 1 的正方形数组：numpy.eye(3)
+
 
 
 
