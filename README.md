@@ -524,6 +524,7 @@ print(f['name']['age'])
 
 ```
 
+```
   - DataFrame 的基础属性，df 是定义的 DataFrame 对象
     
     df.shape 行数 列数
@@ -577,6 +578,7 @@ print(f['name']['age'])
     df.loc['A', 'Y'] = 100
     
     df.iloc[1:2, 0:2] = np.nan
+```    
     
 - Pandas：布尔索引
 
