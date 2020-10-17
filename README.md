@@ -484,7 +484,18 @@ print(t3, type(t3))
 
 - Pandas：读取外部数据
 
+```python
+import pandas as pd
 
+# Pandas 读取 csv 中的 数据,设置编码格式
+# pd.read_ excel json html...
+df = pd.read_csv("test_data.csv", encoding='gb18030')
+
+print(df, type(df))
+
+# df 数据类型 DataFrame
+
+```
 
 
 
