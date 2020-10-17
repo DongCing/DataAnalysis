@@ -527,8 +527,26 @@ print(f['name']['age'])
   - DataFrame 的基础属性
     
     df.shape 行数 列数
+    
+    df.dtypes 列数据类型
+    
+    df.ndim 数据维度
+    
+    df.index 行索引
+    
+    df.columns 列索引
+    
+    df.values 对象值，二维 ndarray 数组
   
   - DataFrame 整体情况查询
+  
+    df.head(3) 显示头部几行，默认 5 行
+    
+    df.tail(3) 显示末尾几行，默认 5 行
+    
+    df.info() 相关信息概览：行数，列数，列索引，列非空值个数，列类型，内存占用
+    
+    df.describe() 快速综合统计结果：计数，均值，标准差，最大值，四分位数，最小值
 
 
 
