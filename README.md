@@ -583,6 +583,39 @@ print(f['name']['age'])
 - Pandas：布尔索引
 
   df[ df['列'] > 500]
+  
+  df[ (df['列'].str.len() > 500) & (df['列'] > 100) ]
+  
+- Pandas：缺失数据的处理
+
+  - 数据缺失通常有两种情况
+  
+    - 一种就是空，None 等，在 Pandas 是 NaN （和 np.nan 一样）
+    
+    - 另一种是我们让其为 0 
+    
+  - 缺失数据的处理
+  
+    - 判断数据是否为 NaN ：pd.isnull(df); pd.notnull(df)
+    
+      - 处理方式1：删除 NaN 所在的行列 dropna(axis=0, how='any', inplace=False)
+      
+        - how：any表示行里有 NaN 就删除所在行，all表示行里所有数据为 NaN 才删除所在行
+        
+        - inplace：原地修改，修改原数据
+      
+      - 处理方式2：填充数据，t.fillna(0)，t.fillna(t.mean()),  t['列'].fiallna(t['列'].median())
+        
+        - t.mean()：t 的均值
+        
+        - t.median()：t 的中位数
+      
+    - 处理为 0 的数据：t[ t==0 ] = np.nan
+    
+    
+    
+  
+  
     
     
     
