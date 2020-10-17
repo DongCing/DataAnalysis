@@ -497,7 +497,38 @@ print(df, type(df))
 
 ```
 
+- Pandas：DataFrame 数据类型
 
+```python
+
+import pandas as pd
+import numpy as np
+
+# 创建 DataFrame 对象
+# 既有行索引(index, 0轴, axis=0),又有列索引(columns, 1轴, axis=1)
+df = pd.DataFrame(np.arange(12).reshape(3, 4), index=list('abc'), columns=list('WXYZ'))
+print(df)
+
+# 传入字典数据,列是字典的键
+t = {'name': ['Tom', 'Rose'], 'age': [12, 13]}
+t2 = pd.DataFrame(t)
+print(t2)
+
+# 没有的值为 NaN
+d = [{'name': 'tom', 'age': 12, 'tel': 100}, {'name': 'rose', 'age': 11}, {'name': 'jack', 'tel': 110}]
+d2 = pd.DataFrame(d)
+print(d2)
+
+f = {'name': {'age': 10}}
+print(f['name']['age'])
+
+```
+
+  - DataFrame 的基础属性
+    
+    df.shape 行数 列数
+  
+  - DataFrame 整体情况查询
 
 
 
