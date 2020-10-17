@@ -578,8 +578,9 @@ print(f['name']['age'])
     
     df.iloc[1:2, 0:2] = np.nan
     
-    
-    
+- Pandas：布尔索引
+
+  df[ df['列'] > 500]
     
     
     
