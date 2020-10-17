@@ -524,7 +524,7 @@ print(f['name']['age'])
 
 ```
 
-  - DataFrame 的基础属性
+  - DataFrame 的基础属性，df 是定义的 DataFrame 对象
     
     df.shape 行数 列数
     
