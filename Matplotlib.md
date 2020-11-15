@@ -5,7 +5,7 @@
 - matplotlib.bar(x, y)，条线图
 - matplotlib.scatter(x, y)，散点图
 - matplotlib.hist(data, bins, normed)，直方图
-- xticks 和 yticks 的设置
+- xticks 和 yticks 刻度的设置
 - label 和 titile.grid 的设置
 - 绘图的大小和保存图片
 
